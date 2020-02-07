@@ -13,11 +13,9 @@ function reset (){
     $(".crystal").each(function(){
         numberToGuess = Math.floor(Math.random() * 101 + 19);
         //console.log(value);
-        {
-            $(this).attr({
-                "data-random":numberToGuess
-            });
-        }
+        
+            
+        
         //reset player score
         playerTotal = 0;
 
@@ -33,14 +31,13 @@ function reset (){
 }
 reset()
 
-
+value = Math.floor(Math.random() * 11 + 1);
 //game start
 function gameStart(){
+    //value = Math.floor(Math.random() * 11 + 1);
     $(".crystal").click(function(){
-       value = Math.floor(Math.random() * 11 + 1);
-       $(this).attr({
-           
-       })
+       // value = Math.floor(Math.random() * 11 + 1);
+       
        console.log(value);
        playerTotal = playerTotal + value;
        $("#totalScore").text(playerTotal);
@@ -85,7 +82,7 @@ function winLoss(){
     }
 
     }
-    winLoss()
+    
 
     function winOn(){
         $("#win-overlay").style.display = "block";
